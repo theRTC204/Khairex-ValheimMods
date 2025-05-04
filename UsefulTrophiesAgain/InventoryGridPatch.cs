@@ -8,6 +8,8 @@ namespace UsefulTrophiesAgain
         public static bool Prefix(InventoryGrid __instance, [HarmonyArgument(0)] Player player, [HarmonyArgument(1)] ItemDrop.ItemData dragItem)
         {
             if (!UsefulTrophiesAgain.EnableSellingTrophies) return true;
+
+            if (player == null) return true;
         
             foreach (ItemDrop.ItemData itemData in player.GetInventory().GetAllItems())
             {
