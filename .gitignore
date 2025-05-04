@@ -169,6 +169,12 @@ DocProject/Help/html
 # Click-Once directory
 publish/
 
+# Publish Package Output
+PublishOutput/
+*/Package/
+pdb2mdb.exe
+*.zip
+
 # Publish Web Output
 *.[Pp]ublish.xml
 *.azurePubxml
