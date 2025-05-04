@@ -7,8 +7,8 @@
     <ProjectGuid>{B924561B-3250-4173-A060-5460889046AA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UsefulTrophies</RootNamespace>
-    <AssemblyName>UsefulTrophies</AssemblyName>
+    <RootNamespace>UsefulTrophiesAgain</RootNamespace>
+    <AssemblyName>UsefulTrophiesAgain</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -35,7 +35,7 @@
     <Compile Include="InventoryGridPatch.cs" />
     <Compile Include="PlayerPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UsefulTrophies.cs" />
+    <Compile Include="UsefulTrophiesAgain.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="0Harmony20">

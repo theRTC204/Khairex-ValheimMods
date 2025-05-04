@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using HarmonyLib;
 using UnityEngine;
 
-namespace UsefulTrophies
+namespace UsefulTrophiesAgain
 {
     [HarmonyPatch(typeof(Humanoid), "UseItem")]
     class UseItemPatch
@@ -13,10 +13,10 @@ namespace UsefulTrophies
         {
             string itemName = item.m_shared.m_name;
 
-            if (UsefulTrophies.CanConsumeBossSummonItems && UsefulTrophies.SecondaryPowerDict.TryGetValue(itemName, out string powerName))
+            if (UsefulTrophiesAgain.CanConsumeBossSummonItems && UsefulTrophiesAgain.SecondaryPowerDict.TryGetValue(itemName, out string powerName))
             {
                 StatusEffect bossPower = ObjectDB.instance.GetStatusEffect(powerName);
-                if (!UsefulTrophies.SecondaryPowerTime.TryGetValue(itemName, out float powerTime))
+                if (!UsefulTrophiesAgain.SecondaryPowerTime.TryGetValue(itemName, out float powerTime))
                 {
                     powerTime = 120f;
                 }
@@ -39,11 +39,11 @@ namespace UsefulTrophies
             {
                 string enemy = itemName.Substring(13);
 
-                if (UsefulTrophies.BossEnemies.Contains(enemy))
+                if (UsefulTrophiesAgain.BossEnemies.Contains(enemy))
                 {
-                    if (!UsefulTrophies.CanConsumeBosses) return true;
+                    if (!UsefulTrophiesAgain.CanConsumeBosses) return true;
                     
-                    if (UsefulTrophies.BossPowerDict.TryGetValue(enemy, out powerName))
+                    if (UsefulTrophiesAgain.BossPowerDict.TryGetValue(enemy, out powerName))
                     {
                         StatusEffect bossPower = ObjectDB.instance.GetStatusEffect(powerName);
                             
@@ -72,7 +72,7 @@ namespace UsefulTrophies
                         }
                         
                         // Copy power so we dont effect the original data
-                        ApplyStatusEffect(bossPower.Clone(), UsefulTrophies.BossPowerTime, __instance.transform.position);
+                        ApplyStatusEffect(bossPower.Clone(), UsefulTrophiesAgain.BossPowerTime, __instance.transform.position);
                     }
                 }
                 
@@ -104,7 +104,7 @@ namespace UsefulTrophies
                 Skills.Skill randomSkill = skills[UnityEngine.Random.Range(0, skills.Count)];
 
                 float skillFactor = 10f;
-                if (UsefulTrophies.TrophyXPDict.TryGetValue(enemy, out float dictSkillFactor))
+                if (UsefulTrophiesAgain.TrophyXPDict.TryGetValue(enemy, out float dictSkillFactor))
                 {
                     skillFactor = dictSkillFactor;
                 }

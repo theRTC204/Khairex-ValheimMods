@@ -4,13 +4,13 @@ using BepInEx;
 using BepInEx.Configuration;
 using HarmonyLib;
 
-namespace UsefulTrophies
+namespace UsefulTrophiesAgain
 {
-    [BepInPlugin(Id, "Useful Trophies Mod", "2.0.0")]
+    [BepInPlugin(Id, "Useful Trophies Again", "0.1.0")]
     [BepInProcess("valheim.exe")]
-    public class UsefulTrophies : BaseUnityPlugin
+    public class UsefulTrophiesAgain : BaseUnityPlugin
     {
-        public const string Id = "gg.khairex.usefultrophies";
+        public const string Id = "com.awellroundedbreakfast.usefultrophiesagain";
 
         public Harmony Harmony { get; } = new Harmony(Id);
 
