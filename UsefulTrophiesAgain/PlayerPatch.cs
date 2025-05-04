@@ -15,7 +15,7 @@ namespace UsefulTrophiesAgain
 
             if (UsefulTrophiesAgain.CanConsumeBossSummonItems && UsefulTrophiesAgain.SecondaryPowerDict.TryGetValue(itemName, out string powerName))
             {
-                StatusEffect bossPower = ObjectDB.instance.GetStatusEffect(powerName);
+                StatusEffect bossPower = ObjectDB.instance.GetStatusEffect(powerName.GetStableHashCode());
                 if (!UsefulTrophiesAgain.SecondaryPowerTime.TryGetValue(itemName, out float powerTime))
                 {
                     powerTime = 120f;
@@ -45,7 +45,7 @@ namespace UsefulTrophiesAgain
                     
                     if (UsefulTrophiesAgain.BossPowerDict.TryGetValue(enemy, out powerName))
                     {
-                        StatusEffect bossPower = ObjectDB.instance.GetStatusEffect(powerName);
+                        StatusEffect bossPower = ObjectDB.instance.GetStatusEffect(powerName.GetStableHashCode());
                             
                         // Protection against eating boss heads near unactivated boss stones
                         BossStone[] bossStones = GameObject.FindObjectsOfType<BossStone>();

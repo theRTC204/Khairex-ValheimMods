@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UsefulTrophiesAgain</RootNamespace>
     <AssemblyName>UsefulTrophiesAgain</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -40,6 +40,9 @@
   <ItemGroup>
     <Reference Include="0Harmony20">
       <HintPath>..\libs\0Harmony20.dll</HintPath>
+    </Reference>
+    <Reference Include="assembly_utils">
+      <HintPath>..\libs\assembly_utils.dll</HintPath>
     </Reference>
     <Reference Include="assembly_guiutils">
       <HintPath>..\libs\assembly_guiutils.dll</HintPath>

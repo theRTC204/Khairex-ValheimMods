@@ -350,3 +350,6 @@ MigrationBackup/
 .ionide/
 
 .idea/
+
+# Compile-time dependencies
+[Ll]ibs/
